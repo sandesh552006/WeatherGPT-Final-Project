@@ -18,7 +18,7 @@ export const AdvisoryTimeline: React.FC<AdvisoryTimelineProps> = ({
   if (!timeline || timeline.length === 0) return null;
 
   return (
-    <div className="p-5 rounded-3xl bg-white border border-slate-200/80 shadow-sm space-y-3">
+    <div className="p-4 sm:p-5 rounded-3xl bg-white border border-slate-200/80 shadow-sm space-y-3">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <Clock className="h-4 w-4 text-blue-600" />
@@ -45,8 +45,8 @@ export const AdvisoryTimeline: React.FC<AdvisoryTimelineProps> = ({
       </div>
 
       {/* 24-Hour Blocks Ribbon */}
-      <div className="relative">
-        <div className="grid grid-cols-12 md:grid-cols-24 gap-1 py-1">
+      <div className="relative overflow-x-auto">
+        <div className="grid grid-cols-12 md:grid-cols-24 gap-1 py-1 min-w-[280px]">
           {timeline.slice(0, 24).map((slot, idx) => {
             const isHovered = hoverSlot?.hourIndex === slot.hourIndex;
             const bgClass =

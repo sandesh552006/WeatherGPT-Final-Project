@@ -96,8 +96,9 @@ export const ClimateLineChart: React.FC<ClimateLineChartProps> = ({
   }
 
   return (
-    <div className="relative w-full select-none">
-      {/* Legend */}
+    <div className="w-full overflow-x-auto">
+      <div className="relative min-w-[500px] w-full select-none">
+        {/* Legend */}
       {series.length > 1 && (
         <div className="flex flex-wrap items-center gap-4 mb-3 text-xs font-semibold text-slate-600">
           {series.map((s) => (
@@ -287,6 +288,7 @@ export const ClimateLineChart: React.FC<ClimateLineChartProps> = ({
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 };

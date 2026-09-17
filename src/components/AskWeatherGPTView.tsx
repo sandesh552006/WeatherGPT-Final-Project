@@ -594,15 +594,15 @@ export const AskWeatherGPTView: React.FC<AskWeatherGPTViewProps> = ({
       />
 
       {/* Main Chat Conversation Area */}
-      <div className="flex-1 flex flex-col h-full overflow-hidden max-w-5xl mx-auto px-4 sm:px-6 py-4 transition-all duration-300">
+      <div className="flex-1 flex flex-col h-full overflow-hidden max-w-5xl mx-auto px-2.5 sm:px-6 py-3 sm:py-4 transition-all duration-300">
         {/* Header bar */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-200/80 mb-3 select-none flex-shrink-0">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             {/* Mobile History Toggle Button */}
             <button
               type="button"
               onClick={() => setIsMobileHistoryOpen(true)}
-              className="md:hidden flex h-9 w-9 items-center justify-center rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 shadow-2xs"
+              className="md:hidden flex h-9 w-9 items-center justify-center rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 shadow-2xs flex-shrink-0"
               title="View Chat History"
             >
               <HistoryIcon className="h-4 w-4" />
@@ -613,33 +613,33 @@ export const AskWeatherGPTView: React.FC<AskWeatherGPTViewProps> = ({
               <button
                 type="button"
                 onClick={() => setIsDesktopHistoryOpen(true)}
-                className="hidden md:flex h-9 w-9 items-center justify-center rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 shadow-2xs transition-all animate-in fade-in duration-200"
+                className="hidden md:flex h-9 w-9 items-center justify-center rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 shadow-2xs transition-all animate-in fade-in duration-200 flex-shrink-0"
                 title="Open Chat History"
               >
                 <PanelLeftOpen className="h-4 w-4" />
               </button>
             )}
 
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm shadow-sm">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm shadow-sm flex-shrink-0">
               AI
             </div>
-            <div>
-              <h2 className="text-base font-bold text-slate-800 flex items-center gap-2">
+            <div className="min-w-0">
+              <h2 className="text-sm sm:text-base font-bold text-slate-800 flex flex-wrap items-center gap-1.5 sm:gap-2">
                 Ask WeatherGPT
-                <span className="flex items-center gap-1 text-[11px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                <span className="flex items-center gap-1 text-[10px] sm:text-[11px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   Live Open-Meteo
                 </span>
                 {voiceState !== 'idle' && (
-                  <span className="flex items-center gap-1 text-[11px] font-medium text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+                  <span className="flex items-center gap-1 text-[10px] sm:text-[11px] font-medium text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
                     <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-pulse" />
                     Gemini Live Voice
                   </span>
                 )}
               </h2>
-              <div className="flex items-center gap-1.5 text-xs text-slate-500">
-                <MapPin className="h-3 w-3 text-red-500" />
-                <span>
+              <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-slate-500 truncate max-w-[190px] sm:max-w-md">
+                <MapPin className="h-3 w-3 text-red-500 flex-shrink-0" />
+                <span className="truncate">
                   Current Context:{' '}
                   <strong>
                     {getLocalizedLocationName(currentLocation, language)},{' '}
@@ -721,7 +721,7 @@ export const AskWeatherGPTView: React.FC<AskWeatherGPTViewProps> = ({
               )}
 
               <div
-                className={`max-w-[85%] sm:max-w-[75%] rounded-3xl p-5 shadow-sm space-y-3 ${
+                className={`max-w-[90%] sm:max-w-[75%] rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 shadow-sm space-y-3 ${
                   msg.role === 'user'
                     ? 'bg-[#1d68f5] text-white rounded-br-sm'
                     : msg.isConfigError
@@ -810,7 +810,7 @@ export const AskWeatherGPTView: React.FC<AskWeatherGPTViewProps> = ({
               e.preventDefault();
               sendMessage(inputValue);
             }}
-            className="relative rounded-3xl bg-white border border-slate-200/90 shadow-sm focus-within:ring-2 focus-within:ring-blue-500/20 focus-within:border-blue-500 transition-all p-2 flex items-end gap-2"
+            className="relative rounded-3xl bg-white border border-slate-200/90 shadow-sm focus-within:ring-2 focus-within:ring-blue-500/20 focus-within:border-blue-500 transition-all p-1.5 sm:p-2 flex items-end gap-1.5 sm:gap-2"
           >
             <textarea
               ref={textareaRef}
@@ -841,7 +841,7 @@ export const AskWeatherGPTView: React.FC<AskWeatherGPTViewProps> = ({
             </button>
           </form>
 
-          <div className="mt-1.5 flex items-center justify-between text-[11px] text-slate-400 px-3">
+          <div className="mt-1.5 flex flex-col sm:flex-row sm:items-center sm:justify-between text-center sm:text-left text-[10px] sm:text-[11px] text-slate-400 px-3 gap-1">
             <span>
               Press <strong>Enter</strong> to send, 🎙️ for <strong>Voice Mode</strong>
             </span>

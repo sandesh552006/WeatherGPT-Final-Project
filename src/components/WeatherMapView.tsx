@@ -63,7 +63,7 @@ export const WeatherMapView: React.FC<WeatherMapViewProps> = ({
   const locName = getLocalizedLocationName(currentLocation, language);
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-5 sm:space-y-6">
       {/* ======================================================== */}
       {/* 1. HEADER SECTION                                        */}
       {/* ======================================================== */}
@@ -183,7 +183,7 @@ export const WeatherMapView: React.FC<WeatherMapViewProps> = ({
       {/* ======================================================== */}
       {/* 3. INTERACTIVE WEATHER MAP ENGINE (Full Mode)            */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-3.5 sm:p-6 shadow-sm border border-slate-200/80">
         <WeatherMap
           mode="full"
           currentLocation={currentLocation}
@@ -193,7 +193,7 @@ export const WeatherMapView: React.FC<WeatherMapViewProps> = ({
           onLocationChange={onLocationChange}
           selectedHourOffset={hourOffset}
           onHourOffsetChange={setHourOffset}
-          heightClass="h-[540px]"
+          heightClass="h-[360px] sm:h-[460px] lg:h-[540px]"
         />
       </div>
 

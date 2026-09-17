@@ -54,7 +54,7 @@ export const WeatherFactorsPanel: React.FC<WeatherFactorsPanelProps> = ({
   };
 
   return (
-    <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-6 flex flex-col justify-between">
+    <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-6 flex flex-col justify-between">
       <div>
         {/* Header matching Image 2 */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">

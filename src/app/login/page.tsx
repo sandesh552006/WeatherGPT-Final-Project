@@ -274,32 +274,32 @@ router.refresh();
       <div className="absolute inset-0 bg-radial-gradient from-transparent via-slate-950/40 to-slate-950/80 z-0 pointer-events-none" />
 
       {/* TOP BAR */}
-      <header className="relative z-20 w-full px-6 py-5 md:px-12 flex items-center justify-between">
+      <header className="relative z-20 w-full px-4 py-3.5 sm:px-6 sm:py-5 md:px-12 flex items-center justify-between">
         {/* WeatherGPT Brand Header (Matches Existing Logo & Subtitle) */}
         <div className="flex items-center gap-3 select-none">
           <img
             src="/weathergpt-logo.jpg"
             alt="WeatherGPT Logo"
-            className="h-11 w-11 object-contain rounded-2xl shadow-lg shadow-sky-500/20 border border-sky-500/30 ring-1 ring-white/10"
+            className="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-2xl shadow-lg shadow-sky-500/20 border border-sky-500/30 ring-1 ring-white/10 flex-shrink-0"
           />
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-1.5">
-              <span className="text-xl md:text-2xl font-black text-white tracking-tight">
+              <span className="text-xl md:text-2xl font-black text-white tracking-tight truncate">
                 Weather<span className="text-sky-400">GPT</span>
               </span>
             </div>
-            <p className="text-[11px] md:text-xs text-slate-400 font-medium tracking-wide">
+            <p className="text-[11px] md:text-xs text-slate-400 font-medium tracking-wide truncate">
               {authT.welcomeSubtitle || 'Your Weather Companion'}
             </p>
           </div>
         </div>
 
         {/* Global Language Selector Dropdown */}
-        <div className="relative" ref={langMenuRef}>
+        <div className="relative flex-shrink-0" ref={langMenuRef}>
           <button
             type="button"
             onClick={() => setShowLangMenu(!showLangMenu)}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/70 hover:bg-slate-800/80 border border-slate-700/60 backdrop-blur-md text-xs font-medium text-slate-200 transition-all shadow-md"
+            className="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 rounded-full bg-slate-900/70 hover:bg-slate-800/80 border border-slate-700/60 backdrop-blur-md text-xs font-medium text-slate-200 transition-all shadow-md"
             aria-label="Select Language"
           >
             <Globe className="h-3.5 w-3.5 text-sky-400" />
@@ -308,7 +308,7 @@ router.refresh();
           </button>
 
           {showLangMenu && (
-            <div className="absolute right-0 mt-2 w-44 rounded-2xl bg-[#0b192c]/95 border border-slate-700/80 shadow-2xl backdrop-blur-xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+            <div className="absolute right-0 mt-2 w-44 max-w-[calc(100vw-2rem)] rounded-2xl bg-[#0b192c]/95 border border-slate-700/80 shadow-2xl backdrop-blur-xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
               <div className="max-h-56 overflow-y-auto space-y-0.5 custom-scrollbar">
                 {SUPPORTED_LANGUAGES.map((opt) => {
                   const isSelected = opt.code === language;
@@ -337,13 +337,13 @@ router.refresh();
       </header>
 
       {/* MAIN VIEWPORT: SPLIT-SCREEN LAYOUT */}
-      <main className="relative z-10 w-full px-6 py-4 md:px-12 lg:px-16 flex-1 flex items-center">
+      <main className="relative z-10 w-full px-4 py-3 sm:px-8 md:px-12 lg:px-16 flex-1 flex items-center">
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* LEFT COLUMN: AUTHENTICATION CARD */}
           <div className="w-full lg:col-span-6 xl:col-span-5 flex flex-col justify-center max-w-lg mx-auto lg:mx-0">
             {/* Primary Glowing Glassmorphic Container */}
-            <div className="relative rounded-[28px] bg-[#0c182b]/85 backdrop-blur-2xl border border-sky-500/30 p-7 md:p-8 shadow-[0_0_50px_-10px_rgba(14,165,233,0.22)] ring-1 ring-sky-400/20">
+            <div className="relative rounded-[28px] bg-[#0c182b]/85 backdrop-blur-2xl border border-sky-500/30 p-5 sm:p-7 md:p-8 shadow-[0_0_50px_-10px_rgba(14,165,233,0.22)] ring-1 ring-sky-400/20">
               
               {/* Card Header */}
               <div className="flex items-start justify-between mb-4">

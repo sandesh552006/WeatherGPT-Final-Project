@@ -187,11 +187,11 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
   const insights = generateInsights();
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6 sm:space-y-8">
       {/* ======================================================== */}
       {/* A. LOCATION HEADER                                        */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-gradient-to-br from-[#0d2144] via-[#0b1b36] to-[#08162e] text-white p-7 shadow-xl border border-slate-800 relative overflow-hidden">
+      <div className="rounded-3xl bg-gradient-to-br from-[#0d2144] via-[#0b1b36] to-[#08162e] text-white p-4 sm:p-7 shadow-xl border border-slate-800 relative overflow-hidden">
         {/* Subtle decorative glow */}
         <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -270,7 +270,7 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
       {/* ======================================================== */}
       {/* B. TODAY'S WEATHER SUMMARY (12 key metrics)              */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
             <div className="h-2 w-2 rounded-full bg-blue-600" />
@@ -443,7 +443,7 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
       {/* ======================================================== */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* D. 7-Day Forecast (5 Cols) */}
-        <div className="lg:col-span-5 rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+        <div className="lg:col-span-5 rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2">
@@ -526,7 +526,7 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
         {/* E & F. CHARTS: TEMPERATURE TREND & PRECIPITATION (7 Cols) */}
         <div className="lg:col-span-7 space-y-6">
           {/* E. Temperature Trend SVG Chart */}
-          <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+          <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -543,10 +543,10 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
             </div>
 
             {/* Responsive SVG Chart */}
-            <div className="w-full overflow-x-auto">
+            <div className="w-full overflow-x-auto pb-2">
               <svg
                 viewBox={`0 0 ${chartWidth} ${chartHeight}`}
-                className="w-full h-44 select-none overflow-visible"
+                className="w-full min-w-[500px] h-44 select-none overflow-visible"
               >
                 <defs>
                   <linearGradient id="tempGradient" x1="0" y1="0" x2="0" y2="1">
@@ -655,7 +655,7 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
           </div>
 
           {/* F. Precipitation / Rain Chart */}
-          <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+          <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -716,7 +716,7 @@ export const WeatherForecastView: React.FC<WeatherForecastViewProps> = ({
       {/* ======================================================== */}
       {/* G. WEATHER INSIGHTS (Deterministic rule-based logic)      */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-indigo-600" />

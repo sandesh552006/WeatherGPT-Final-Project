@@ -35,6 +35,7 @@ function WeatherGPTApp() {
   const [pendingQuestion, setPendingQuestion] = useState<string>('');
   const [isLocatingCurrent, setIsLocatingCurrent] = useState<boolean>(false);
   const [locationError, setLocationError] = useState<string | null>(null);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
 
   // Alerts State
   const [alerts, setAlerts] = useState<WeatherAlert[]>([]);
@@ -214,8 +215,13 @@ function WeatherGPTApp() {
 
   return (
     <div className="flex h-screen bg-[#f4f7fb] overflow-hidden">
-      {/* Left Sidebar */}
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* Left Sidebar (Desktop + Mobile Slide-over Drawer) */}
+      <Sidebar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        isOpenMobile={isMobileNavOpen}
+        onCloseMobile={() => setIsMobileNavOpen(false)}
+      />
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col h-screen overflow-y-auto">
@@ -233,6 +239,7 @@ function WeatherGPTApp() {
             setActiveTab('alerts');
           }}
           onNavigateToAlerts={() => setActiveTab('alerts')}
+          onOpenMobileNav={() => setIsMobileNavOpen(true)}
         />
 
         {/* Tab View Routing */}

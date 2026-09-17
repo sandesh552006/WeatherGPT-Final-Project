@@ -81,7 +81,7 @@ export const SectoralAdvisoryView: React.FC<SectoralAdvisoryViewProps> = ({
   };
 
   return (
-    <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6 sm:space-y-8">
       {/* 1. TOP SECTION: MISSION DOMAINS & 8 SECTOR CARDS (Image 1) */}
       <SectorSelector
         selectedSector={selectedSector}
@@ -92,7 +92,7 @@ export const SectoralAdvisoryView: React.FC<SectoralAdvisoryViewProps> = ({
       {/* 2. MAIN DETAIL GRID (Image 2: Left 8 cols, Right 4 cols) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* LEFT / CENTER: MAIN ADVISORY PANEL (8 Cols) */}
-        <div className="lg:col-span-8 rounded-3xl bg-white p-6 md:p-8 border border-slate-200/80 shadow-sm space-y-6">
+        <div className="lg:col-span-8 rounded-3xl bg-white p-4 sm:p-6 lg:p-8 border border-slate-200/80 shadow-sm space-y-6">
           {/* Advisory Header matching Image 2 */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
             <div className="flex items-center gap-3">

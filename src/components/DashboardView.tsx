@@ -194,11 +194,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     : t.home.greeting;
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-5 sm:space-y-6">
       {/* Header Greeting */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             {greetingText} <span className="inline-block animate-wave origin-bottom-right">👋</span>
           </h1>
           <p className="text-sm text-slate-500 mt-1 font-medium">
@@ -215,7 +215,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Top 3-Column Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* 1. Current Weather Deep Navy Card */}
-        <div className="rounded-3xl bg-gradient-to-br from-[#0d2144] via-[#0b1b36] to-[#08162e] text-white p-6 shadow-xl relative overflow-hidden flex flex-col justify-between border border-slate-800">
+        <div className="rounded-3xl bg-gradient-to-br from-[#0d2144] via-[#0b1b36] to-[#08162e] text-white p-4 sm:p-6 shadow-xl relative overflow-hidden flex flex-col justify-between border border-slate-800">
           {/* Subtle decorative glow */}
           <div className="absolute -top-16 -right-16 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -343,14 +343,14 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* 2. Today's Forecast Card */}
-        <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+        <div className="rounded-3xl bg-white p-4 sm:p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
           <div>
             <h2 className="text-base font-bold text-slate-800 tracking-tight">
               {t.dashboard.forecastTitle}
             </h2>
 
             {/* Hourly ribbon */}
-            <div className="mt-4 grid grid-cols-5 gap-2 py-3 border-b border-slate-100">
+            <div className="mt-4 grid grid-cols-5 gap-1 sm:gap-2 py-3 border-b border-slate-100 overflow-x-auto">
               {(weather?.hourly24h && weather.hourly24h.length >= 5
                 ? weather.hourly24h.slice(0, 5)
                 : [
@@ -395,7 +395,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* 3. Active Alerts Card */}
-        <div className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+        <div className="rounded-3xl bg-white p-4 sm:p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between">
               <h2 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -487,7 +487,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Bottom Grid: Live Map & Ask WeatherGPT Widget */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left: Weather Map (Live) - 7 Cols */}
-        <div className="lg:col-span-7 rounded-3xl bg-white p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+        <div className="lg:col-span-7 rounded-3xl bg-white p-4 sm:p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
               <MapPin className="h-4 w-4 text-rose-500" />
@@ -521,7 +521,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Right: Ask WeatherGPT Widget - 5 Cols */}
-        <div className="lg:col-span-5 rounded-3xl bg-white p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+        <div className="lg:col-span-5 rounded-3xl bg-white p-4 sm:p-6 shadow-sm border border-slate-200/80 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">

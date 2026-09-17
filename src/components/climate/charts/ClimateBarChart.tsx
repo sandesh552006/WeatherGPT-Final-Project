@@ -75,8 +75,9 @@ export const ClimateBarChart: React.FC<ClimateBarChartProps> = ({
   const showLabel = (i: number) => i === 0 || i === n - 1 || i % labelInterval === 0;
 
   return (
-    <div className="relative w-full select-none">
-      <svg
+    <div className="w-full overflow-x-auto">
+      <div className="relative min-w-[500px] w-full select-none">
+        <svg
         viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
         className="w-full h-auto overflow-visible"
         style={{ maxHeight: height }}
@@ -204,6 +205,7 @@ export const ClimateBarChart: React.FC<ClimateBarChartProps> = ({
           )}
         </div>
       )}
+      </div>
     </div>
   );
 };

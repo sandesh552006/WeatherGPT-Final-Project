@@ -129,7 +129,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
   };
 
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6 sm:space-y-8">
       {/* ======================================================== */}
       {/* 1. HEADER                                                */}
       {/* ======================================================== */}
@@ -139,7 +139,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
             <ShieldAlert className="h-5 w-5" />
             <span className="text-xs font-bold uppercase tracking-wider">{t.alerts.bureauTitle}</span>
           </div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             {t.alerts.alertsTitle}
           </h1>
           <p className="text-sm text-slate-500 mt-1">
@@ -178,9 +178,9 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
       {/* ======================================================== */}
       {/* 2. ACTIVE ALERT SUMMARY CARDS (Dashboard style)          */}
       {/* ======================================================== */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {/* Red / Severe */}
-        <div className="p-5 rounded-3xl bg-rose-50/80 border border-rose-200/80 shadow-xs">
+        <div className="p-4 sm:p-5 rounded-3xl bg-rose-50/80 border border-rose-200/80 shadow-xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-rose-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>🔴</span> {t.alerts.severeWarnings}
@@ -192,7 +192,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
         </div>
 
         {/* Orange / Alert */}
-        <div className="p-5 rounded-3xl bg-orange-50/80 border border-orange-200/80 shadow-xs">
+        <div className="p-4 sm:p-5 rounded-3xl bg-orange-50/80 border border-orange-200/80 shadow-xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-orange-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>🟠</span> {t.alerts.weatherAlerts}
@@ -204,7 +204,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
         </div>
 
         {/* Yellow / Watch */}
-        <div className="p-5 rounded-3xl bg-amber-50/80 border border-amber-200/80 shadow-xs">
+        <div className="p-4 sm:p-5 rounded-3xl bg-amber-50/80 border border-amber-200/80 shadow-xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-amber-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>🟡</span> {t.alerts.weatherWatches}
@@ -216,7 +216,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
         </div>
 
         {/* Normal / Green */}
-        <div className="p-5 rounded-3xl bg-emerald-50/80 border border-emerald-200/80 shadow-xs">
+        <div className="p-4 sm:p-5 rounded-3xl bg-emerald-50/80 border border-emerald-200/80 shadow-xs">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-bold text-emerald-900 uppercase tracking-wider flex items-center gap-1.5">
               <span>🟢</span> {t.alerts.normalStations}
@@ -399,7 +399,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
       {/* ======================================================== */}
       {/* 5. LIVE NOWCAST SECTION (Near-term weather radar)        */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
             <Zap className="h-5 w-5 text-amber-500" />
@@ -454,7 +454,7 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
       {/* ======================================================== */}
       {/* 6. INDIA ALERT MAP                                       */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Layers className="h-5 w-5 text-blue-600" />
@@ -470,14 +470,14 @@ export const AlertsWarningsView: React.FC<AlertsWarningsViewProps> = ({
           currentLocation={currentLocation}
           onSelectAlert={(a) => setSelectedModalAlert(a)}
           onOpenChat={onOpenChat}
-          heightClass="h-[460px]"
+          heightClass="h-[360px] sm:h-[460px]"
         />
       </div>
 
       {/* ======================================================== */}
       {/* 7. CIVIL SAFETY GUIDANCE CATALOG                         */}
       {/* ======================================================== */}
-      <div className="rounded-3xl bg-white p-7 shadow-sm border border-slate-200/80">
+      <div className="rounded-3xl bg-white p-4 sm:p-7 shadow-sm border border-slate-200/80">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-2">
             <ShieldCheck className="h-5 w-5 text-emerald-600" />

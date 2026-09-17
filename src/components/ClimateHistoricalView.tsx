@@ -317,7 +317,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
       : 55;
 
   return (
-    <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-3.5 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6 sm:space-y-8">
       {/* 1. CLIMATE HEADER */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
@@ -511,7 +511,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 3. HISTORICAL WEATHER EXPLORER */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h2 className="text-lg font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -707,7 +707,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           {/* 4. TEMPERATURE TREND & 5. RAINFALL TREND (2 COLUMNS) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Temperature Trend */}
-            <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
+            <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
               <div>
                 <div className="flex items-center justify-between">
                   <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -771,7 +771,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
             </div>
 
             {/* Rainfall Trend */}
-            <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
+            <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4">
               <div>
                 <div className="flex items-center justify-between">
                   <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -826,7 +826,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 6. CLIMATE ANOMALY SECTION */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -983,7 +983,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 7. EXTREME WEATHER ANALYSIS */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -1074,7 +1074,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 8. SEASONAL ANALYSIS */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -1147,7 +1147,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 9. YEAR COMPARISON */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -1331,7 +1331,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           </div>
 
           {/* 10. LOCATION COMPARISON */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -1462,7 +1462,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
 
           {/* 11. CLIMATE RISK INSIGHTS & SCORECARD */}
           {riskIndicators && (
-            <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+            <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <div className="flex items-center gap-2">
@@ -1598,7 +1598,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
           )}
 
           {/* 12. FUTURE CLIMATE OUTLOOK (2025–2050) & 13. MULTI-MODEL PROJECTION */}
-          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-2">
@@ -1741,7 +1741,7 @@ export const ClimateHistoricalView: React.FC<ClimateHistoricalViewProps> = ({
 
           {/* 14. CLIMATE TIMELINE (DATA-DERIVED HISTORICAL EXTREMES) */}
           {timelineEvents.length > 0 && (
-            <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-5">
+            <div className="rounded-3xl bg-white p-4 sm:p-6 border border-slate-200/80 shadow-sm space-y-5">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-base font-bold text-slate-800 tracking-tight flex items-center gap-2">
